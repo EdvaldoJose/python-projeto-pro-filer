@@ -1,4 +1,5 @@
-from pro_filer.actions.main_actions import show_disk_usage, _get_printable_file_path  # NOQA
+from pro_filer.actions.main_actions import show_disk_usage
+from pro_filer.cli_helpers import _get_printable_file_path
 from typing import Dict, Any # NOQA
 
 
