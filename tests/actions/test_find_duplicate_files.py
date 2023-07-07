@@ -6,14 +6,16 @@ def test_find_duplicate_files_no_duplicates(tmp_path):
     output_path1 = tmp_path / "file1.py"
     output_path2 = tmp_path / "file2.py"
     output_path3 = tmp_path / "file3.py"
+    output_path4 = tmp_path / "file4.py"
 
     output_path1.write_text("string_1")
     output_path2.write_text("string_2")
     output_path3.write_text("string_3")
+    output_path4.write_text("string_4")
 
     context = {
         "all_files": [
-            output_path1, output_path2, output_path3,
+            output_path1, output_path2, output_path3, output_path4
         ]
     }
 
