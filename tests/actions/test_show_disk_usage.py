@@ -1,5 +1,5 @@
-from pro_filer.actions.main_actions import show_disk_usage
-from pro_filer.cli_helpers import _get_printable_file_path
+from pro_filer.actions.main_actions import show_disk_usage # NOQA
+from pro_filer.cli_helpers import _get_printable_file_path # NOQA
 from typing import Dict, Any # NOQA
 
 
@@ -26,8 +26,8 @@ def test_show_disk_usage_with_files(capsys, tmp_path):
 
     # captured = capsys.readouterr()
     result = capsys.readouterr()
-    output = f"'{_get_printable_file_path(path)}':".ljust(70)
-    empty_output = f"'{_get_printable_file_path(path_empty)}':".ljust(70)
+    output = f"'{_get_printable_file_path(path)}':".ljust(0)
+    empty_output = f"'{_get_printable_file_path(path_empty)}':".ljust(90)
     assert result.out == f"{output} 4 (100%)\n\
         {empty_output} 0 (0%)\nTotal size: 4\n"
 
